@@ -1,95 +1,18 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import ResumeItem from './resumeItem'
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
+    <div className="flex justify-center items-center h-full ml-16 mr-16">
+      <div className="flow-root">
+        <ul role="list" className="-mb-8">
+          {/* Hope the following comment will be removed soon :-)*/}
+          {/* <ResumeItem time="Since 2023" company="Vercel, Planet Earth" positions={["Sales Engineer"]} image="/vercel.png"/> */}
+          <ResumeItem time="Since 2020" company="NT Neue Technologie AG , Erfurt" positions={["Sofware Developer", "Leading Developer"]} image="./ntag.png"/>
+          <ResumeItem time="Since 2015" company="tizzy.dev, Erfurt" positions={["Freelancing Consultant"]} image="./tizzy-small.png"/>
+          <ResumeItem time="2016 - 2020" company="FITisFIT & Smartplatz GmbH, Erfurt / Berlin" positions={["Co-Founder", "Technical Lead", "Software Developer"]} image="./smartplatz.png"/>
+          <ResumeItem time="2013 - 2017" company="Zalando Logistics SE & Co. KG, Erfurt" positions={["Support Engineer", "Support Engineering Team Lead"]} image="./zalando.png" last />
+        </ul>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+	  </div>
   )
 }
